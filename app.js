@@ -33,8 +33,14 @@ function atualizarLista() {
     });
 }
 
-function sortearAmigo(){
-    
+function sortearAmigo() {
+    if (listaAmigos.length === 0) {
+        alert("Adicione pelo menos um nome antes de sortear.");
+        return;
+    }
+
+    const sorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
+    exibirResultado(sorteado);
 }
 
 
